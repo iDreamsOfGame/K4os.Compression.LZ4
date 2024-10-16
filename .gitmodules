@@ -1,8 +1,0 @@
-[submodule "orig"]
-	path = orig
-	url = https://github.com/lz4/lz4.git
-	branch = dev
-[submodule "upm/Assets/K4os.Compression.LZ4"]
-	path = upm/Assets/K4os.Compression.LZ4
-	url = https://github.com/iDreamsOfGame/K4os.Compression.LZ4.git
-	branch = upm
