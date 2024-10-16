@@ -42,7 +42,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.unitypackage.meta
-Saves/
 /*.meta
 
 # Packed Addressables
@@ -56,14 +55,6 @@ Assets/StreamingAssets/AddressableAssets*
 ~$*.xlsx
 ~$*.xls
 
-# Old Level Data
-*.map
-*.map.meta
-*.hard
-*.hard.meta
-*.puzzle
-*.puzzle.meta
-
 # Beyond Compre
 *.orig
 RiderScriptEditorPersistedState.asset
@@ -71,3 +62,5 @@ RiderScriptEditorPersistedState.asset
 # Mono Crash Log File
 mono_crash.*.json
 mono_crash.mem.*.blob
+
+!Packages/

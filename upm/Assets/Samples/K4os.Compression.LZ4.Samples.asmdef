@@ -1,0 +1,16 @@
+{
+    "name": "K4os.Compression.LZ4.Samples",
+    "rootNamespace": "K4os.Compression.LZ4.Samples",
+    "references": [
+        "K4os.Compression.LZ4.Utilities"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
