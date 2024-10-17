@@ -15,7 +15,10 @@ namespace K4os.Compression.LZ4.Utilities
     /// </summary>
     public static class LZ4Compression
     {
-        private static readonly Encoding DefaultEncoding = Encoding.UTF8;
+        /// <summary>
+        /// The efault encoding used by <see cref="LZ4Compression"/>.
+        /// </summary>
+        public static readonly Encoding DefaultEncoding = Encoding.UTF8;
 
         /// <summary>
         /// Compress binary data into binary data by using the LZ4 algorithm.
