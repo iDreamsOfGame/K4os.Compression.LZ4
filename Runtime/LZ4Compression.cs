@@ -16,7 +16,7 @@ namespace K4os.Compression.LZ4.Utilities
     public static class LZ4Compression
     {
         private static readonly Encoding DefaultEncoding = Encoding.UTF8;
-        
+
         /// <summary>
         /// Compress binary data into binary data by using the LZ4 algorithm.
         /// </summary>
@@ -27,11 +27,16 @@ namespace K4os.Compression.LZ4.Utilities
         {
             if (input == null || input.Length == 0)
                 return null;
-            
+
             var target = new byte[LZ4Codec.MaximumOutputSize(input.Length)];
             var encodedLength = LZ4Codec.Encode(
-                input, 0, input.Length,
-                target, 0, target.Length);
+                input,
+                0,
+                input.Length,
+                target,
+                0,
+                target.Length,
+                level);
             using var output = new MemoryStream();
             output.Write(target, 0, encodedLength);
             return output.ToArray();
@@ -48,7 +53,7 @@ namespace K4os.Compression.LZ4.Utilities
         {
             if (string.IsNullOrEmpty(source))
                 return null;
-            
+
             encoding ??= DefaultEncoding;
             var input = encoding.GetBytes(source);
             return Compress(input, level);
@@ -78,7 +83,7 @@ namespace K4os.Compression.LZ4.Utilities
             var output = Compress(source, encoding, level);
             return Convert.ToBase64String(output);
         }
-        
+
         /// <summary>
         /// Decompress into original binary data from input binary data by using the LZ4 algorithm.
         /// </summary>
@@ -88,8 +93,12 @@ namespace K4os.Compression.LZ4.Utilities
         {
             var target = new byte[input.Length * 255];
             var decoded = LZ4Codec.Decode(
-                input, 0, input.Length,
-                target, 0, target.Length);
+                input,
+                0,
+                input.Length,
+                target,
+                0,
+                target.Length);
             using var output = new MemoryStream();
             output.Write(target, 0, decoded);
             return output.ToArray();
@@ -117,7 +126,7 @@ namespace K4os.Compression.LZ4.Utilities
         {
             if (string.IsNullOrEmpty(source))
                 return null;
-            
+
             var input = Convert.FromBase64String(source);
             return Decompress(input);
         }

@@ -2,7 +2,7 @@
   "name": "com.github.miloszkrajewski.k4os.compression.lz4",
   "displayName": "K4os.Compression.LZ4",
   "description": "This library brings LZ4 to .NET Standard compatible platforms: .NET Core, .NET Framework, Mono, Xamarin, and UWP. Well... theoretically... kind of. Currently, it targets .NET Framework 4.6.2+, .NET Standard 2.0+ and .NET 5.0+.",
-  "version": "1.3.8-beta.1",
+  "version": "1.3.8-beta.2",
   "unity": "2019.4",
   "author": {
     "name": "Milosz Krajewski",
