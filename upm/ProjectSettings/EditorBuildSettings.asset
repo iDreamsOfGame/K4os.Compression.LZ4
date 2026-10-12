@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Samples/LZ4CompressionSample.unity
+    path: Assets/Samples/LZ4Compression/LZ4CompressionSample.unity
     guid: 28ababd79de854453b63c03c0c0d391e
   m_configObjects: {}

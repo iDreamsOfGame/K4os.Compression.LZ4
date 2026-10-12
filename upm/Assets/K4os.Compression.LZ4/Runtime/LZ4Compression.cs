@@ -13,7 +13,7 @@ namespace K4os.Compression.LZ4.Utilities
     /// <summary>
     /// Provides methods for compressing and decompressing data by using the LZ4 algorithm.
     /// </summary>
-    public static class LZ4Compression
+    public static partial class LZ4Compression
     {
         /// <summary>
         /// The efault encoding used by <see cref="LZ4Compression"/>.
